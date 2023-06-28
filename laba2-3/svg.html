@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/svg.css" />
   </head>
   <body>
+    <!-- Exercise 3: Icon library -->
     <svg display="none">
       <symbol id="exit" width="100" height="100">
         <g stroke="currentColor" stroke-width="10">
@@ -18,7 +19,7 @@
         </g>
       </symbol>
 
-      <symbol id="burger-menu">
+      <symbol id="burger-menu" width="100" height="100">
         <g>
           <rect width="100" height="100" rx="20px" />
           <rect width="80" height="15" x="10" y="10" fill="#fff" rx="10" />
@@ -45,5 +46,31 @@
         </g>
       </symbol>
     </svg>
+
+    <!-- Exercise 4: Use icon library -->
+    <div class="ex4">
+      <a href="#">
+        <svg class="exit-svg">
+          <use class="ex4__exit" href="#exit" />
+        </svg>
+      </a>
+      <a class="burger-link" href="#">
+        <svg class="burger-svg">
+          <use class="ex4__burger-menu" href="#burger-menu" />
+        </svg>
+      </a>
+      <a href="#">
+        <svg>
+          <use class="ex4__search" href="#search" />
+        </svg>
+      </a>
+      <a href="#">
+        <svg>
+          <use class="ex4__home-page" href="#home-page" />
+        </svg>
+      </a>
+    </div>
+
+    <script src="svg.js"></script>
   </body>
 </html>
