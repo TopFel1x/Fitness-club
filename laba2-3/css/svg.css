@@ -9,6 +9,10 @@ body {
 }
 
 /* Exercise 4: Use icon library */
+.ex4 {
+  margin-bottom: 100px;
+}
+
 .ex4 a {
   text-decoration: none;
   color: currentColor;
@@ -65,4 +69,26 @@ symbol {
   transform: rotate(-45deg);
   transform-origin: center;
   y: 42.5px;
+}
+
+/* Exercise 5: parallax */
+.parallax__fon {
+  margin-left: 200px;
+  width: 200px;
+  background-color: #9dff9d;
+  overflow: hidden;
+  height: 300px;
+}
+
+.parallax__center {
+  position: relative;
+  height: 300px;
+  top: -250px;
+}
+
+.parallax__bottom {
+  position: relative;
+  width: 400px;
+  height: 300px;
+  top: -500px;
 }
