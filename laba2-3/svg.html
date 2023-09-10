@@ -45,6 +45,14 @@
           />
         </g>
       </symbol>
+
+      <symbol id="ex5">
+        <path
+          d="M0 0 L0 300 L500 300 L500 0 L270 0 L270 120 L230 120 L230 70 L200 70
+            L200 40 L150 40 L150 0 L120 0 L120 120 L90 120 L90 10 L50 10 L50 30 L30 30
+            L30 20 L20 20 L20 90 L15 90 L15 0 L0 0"
+        />
+      </symbol>
     </svg>
 
     <!-- Exercise 4: Use icon library -->
@@ -73,70 +81,54 @@
 
     <!-- Exercise 5: Parallax effect -->
     <div class="parallax">
-      <svg class="parralax__defs">
-        <filter id="blur1">
-          <feGaussianBlur in="SourceGraphic" stdDeviation="4" />
-        </filter>
-        <filter id="blur2">
-          <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
-        </filter>
-        <filter id="blur3">
-          <feGaussianBlur in="SourceGraphic" stdDeviation="1" />
-        </filter>
+      <svg>
+        <defs class="parralax__defs">
+          <filter id="blur1">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="1" />
+          </filter>
+          <filter id="blur2">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
+          </filter>
+          <filter id="blur3">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="4" />
+          </filter>
+        </defs>
+        <div class="parallax__fon">
+          <svg class="parallax__top" width="300" height="300">
+            <use href="#ex5" filter="url(#blur1)" fill="#006200" />
+            <animateTransform
+              attributeName="transform"
+              type="translate"
+              from="-100"
+              to="0"
+              dur="8s"
+              repeatCount="indefinite"
+            />
+          </svg>
+          <svg class="parallax__center" filter="url(#blur2)">
+            <use href="#ex5" filter="url(#blur2)" fill="#009d00" />
+            <animateTransform
+              attributeName="transform"
+              type="translate"
+              from="-100"
+              to="0"
+              dur="4s"
+              repeatCount="indefinite"
+            />
+          </svg>
+          <svg class="parallax__bottom">
+            <use href="#ex5" filter="url(#blur3)" fill="#00ff00" />
+            <animateTransform
+              attributeName="transform"
+              type="translate"
+              from="-100"
+              to="0"
+              dur="2s"
+              repeatCount="indefinite"
+            />
+          </svg>
+        </div>
       </svg>
-      <div class="parallax__fon">
-        <svg class="parallax__top" width="800" height="300">
-          <path
-            filter="url(#blur1)"
-            fill="#006200"
-            d="M0 0 L0 300 L300 300 L300 0 L270 0 L270 120 L230 120 L230 70 L200 70
-            L200 40 L150 40 L150 0 L120 0 L120 120 L90 120 L90 10 L50 10 L50 30 L30 30
-            L30 20 L20 20 L20 90 L15 90 L15 0 L0 0"
-          />
-          <animateTransform
-            attributeName="transform"
-            type="translate"
-            from="-100"
-            to="0"
-            dur="10s"
-            repeatCount="indefinite"
-          />
-        </svg>
-        <svg class="parallax__center">
-          <path
-            filter="url(#blur2)"
-            fill="#009d00"
-            d="M0 0 L0 300 L300 300 L300 0 L270 0 L270 120 L230 120 L230 70 L200 70
-            L200 40 L150 40 L150 0 L120 0 L120 120 L90 120 L90 10 L50 10 L50 30 L30 30
-            L30 20 L20 20 L20 90 L15 90 L15 0 L0 0"
-          />
-          <animateTransform
-            attributeName="transform"
-            type="translate"
-            from="-70"
-            to="0"
-            dur="4s"
-            repeatCount="indefinite"
-          />
-        </svg>
-        <svg class="parallax__bottom">
-          <path
-            filter="url(#blur3)"
-            fill="#00ff00"
-            d="M0 0 L0 300 L300 300 L300 0 L270 0 L270 120 L230 120 L230 70 L200 70
-            L200 40 L150 40 L150 0 L120 0 L120 120 L90 120 L90 10 L50 10 L50 30 L30 30
-            L30 20 L20 20 L20 90 L15 90 L15 0 L0 0"
-          />
-          <animateTransform
-            attributeName="transform"
-            type="translate"
-            from="-40"
-            to="0"
-            dur="1s"
-            repeatCount="indefinite"
-          />
-        </svg>
-      </div>
     </div>
 
     <script src="svg.js"></script>
