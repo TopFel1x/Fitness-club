@@ -1,0 +1,15 @@
+$colors: (
+  first: #000,
+  second: #14213d,
+  third: #fca311,
+  fourth: #e5e5e5,
+  fifth: #fff,
+);
+
+@function get-color($color) {
+  @return map-get($colors, $color);
+}
+
+@mixin gradient($color1, $color2) {
+  background-image: linear-gradient(to right, $color1, $color2);
+}
