@@ -24,3 +24,39 @@
 .company__img {
   max-width: 140px;
 }
+
+@media (min-width: 1360px) {
+  .companies__list {
+    row-gap: 50px;
+  }
+
+  .company {
+    &:first-child {
+      max-width: 277px;
+      .company__img {
+        max-width: 277px;
+      }
+    }
+
+    &:nth-child(2) {
+      max-width: 202px;
+      .company__img {
+        max-width: 202px;
+      }
+    }
+
+    &:nth-child(3) {
+      max-width: 209px;
+      .company__img {
+        max-width: 209px;
+      }
+    }
+
+    &:last-child {
+      max-width: 307px;
+      .company__img {
+        max-width: 307px;
+      }
+    }
+  }
+}

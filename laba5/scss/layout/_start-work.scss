@@ -57,3 +57,19 @@
   font-family: DMSans;
   font-size: 18px;
 }
+
+@media (min-width: 1024px) {
+  .start-work__h3 {
+    font-size: 42px;
+  }
+  .steps {
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 30px;
+  }
+
+  .step {
+    flex-basis: 0;
+    flex-grow: 1;
+  }
+}

@@ -165,6 +165,10 @@ table {
   text-align: center;
 }
 
+.session__desktop {
+  display: none;
+}
+
 .session__h1 {
   display: none;
 }
@@ -202,6 +206,37 @@ table {
   font-size: 12px;
 }
 
+@media (min-width: 1240px) {
+  .session__mobile {
+    display: none;
+  }
+  .session__desktop {
+    display: flex;
+    justify-content: space-between;
+    -moz-column-gap: 70px;
+         column-gap: 70px;
+  }
+  .session__inf {
+    margin-top: 120px;
+    max-width: 525px;
+    text-align: left;
+  }
+  .session__h3 {
+    text-align: left;
+    font-size: 48px;
+  }
+  .session__img {
+    max-width: 560px;
+  }
+  .session__link {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  .session__link-desc {
+    margin-left: 32px;
+    font-size: 14px;
+  }
+}
 .companies {
   padding-top: 80px;
   background-color: #10151c;
@@ -227,6 +262,35 @@ table {
   max-width: 140px;
 }
 
+@media (min-width: 1360px) {
+  .companies__list {
+    row-gap: 50px;
+  }
+  .company:first-child {
+    max-width: 277px;
+  }
+  .company:first-child .company__img {
+    max-width: 277px;
+  }
+  .company:nth-child(2) {
+    max-width: 202px;
+  }
+  .company:nth-child(2) .company__img {
+    max-width: 202px;
+  }
+  .company:nth-child(3) {
+    max-width: 209px;
+  }
+  .company:nth-child(3) .company__img {
+    max-width: 209px;
+  }
+  .company:last-child {
+    max-width: 307px;
+  }
+  .company:last-child .company__img {
+    max-width: 307px;
+  }
+}
 .start-work {
   padding: 80px 0;
   background-color: #10151c;
@@ -284,6 +348,21 @@ table {
   font-size: 18px;
 }
 
+@media (min-width: 1024px) {
+  .start-work__h3 {
+    font-size: 42px;
+  }
+  .steps {
+    flex-direction: row;
+    justify-content: space-between;
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+  }
+  .step {
+    flex-basis: 0;
+    flex-grow: 1;
+  }
+}
 .why-us {
   background-color: #10151c;
   padding-bottom: 110px;
@@ -353,6 +432,32 @@ table {
   font-weight: 700;
 }
 
+@media (min-width: 1240px) {
+  .why-us__h2 {
+    font-size: 42px;
+  }
+  .example {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    -moz-column-gap: 140px;
+         column-gap: 140px;
+  }
+  .example:nth-child(2) {
+    flex-direction: row-reverse;
+  }
+  .example__img {
+    max-width: 700px;
+    max-height: 600px;
+  }
+  .example__desc {
+    font-size: 21px;
+  }
+  .example__link {
+    max-width: 340px;
+    font-size: 18px;
+  }
+}
 .advertising {
   padding: 80px 0;
 }
@@ -395,8 +500,39 @@ table {
   display: none;
 }
 
+@media (min-width: 1300px) {
+  .advertising {
+    padding-top: 230px;
+  }
+  .advertising__inner {
+    max-height: 500px;
+    padding-left: 130px;
+    padding-right: 110px;
+    display: flex;
+    -moz-column-gap: 200px;
+         column-gap: 200px;
+  }
+  .advertising__h2 {
+    font-size: 42px;
+  }
+  .advertising__desc {
+    font-size: 18px;
+  }
+  .advertising__link {
+    font-size: 18px;
+  }
+  .advertising__img-wrapper {
+    display: block;
+    position: relative;
+    bottom: 150px;
+  }
+}
 .moving {
   padding: 80px 0;
+}
+
+.moving__desktop {
+  display: none;
 }
 
 .moving__h2 {
@@ -420,6 +556,28 @@ table {
   line-height: 150%; /* 24px */
 }
 
+@media (min-width: 1240px) {
+  .moving__mobile {
+    display: none;
+  }
+  .moving__desktop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    -moz-column-gap: 130px;
+         column-gap: 130px;
+  }
+  .moving__h2 {
+    font-size: 42px;
+  }
+  .moving__img {
+    margin-bottom: 0;
+    max-width: 560px;
+  }
+  .moving__desc {
+    font-size: 21px;
+  }
+}
 .footer {
   padding: 35px 0;
   border: 1px solid #000;
@@ -452,6 +610,19 @@ table {
   flex-basis: 50%;
 }
 
+@media (min-width: 1024px) {
+  .footer__p {
+    display: flex;
+    -moz-column-gap: 5px;
+         column-gap: 5px;
+    font-size: 14px;
+  }
+  .social-media {
+    max-width: 180px;
+    -moz-column-gap: 32px;
+         column-gap: 32px;
+  }
+}
 @font-face {
   font-family: "DMSans";
   src: url("../fonts/DMSans-Regular.woff2") format("woff2");
@@ -467,24 +638,6 @@ table {
 @font-face {
   font-family: "DMSans";
   src: url("../fonts/DMSans-Bold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: "HelveticaNeue";
-  src: url("../fonts/HelveticaNeue-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "HelveticaNeue";
-  src: url("../fonts/HelveticaNeue-Medium.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: "HelveticaNeue";
-  src: url("../fonts/HelveticaNeue-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -509,4 +662,19 @@ body {
 .container {
   margin: 0 auto;
   max-width: calc(100vw - 20px);
+}
+@media (min-width: 380px) {
+  .container {
+    max-width: calc(100vw - 40px);
+  }
+}
+@media (min-width: 760px) {
+  .container {
+    max-width: calc(100vw - 120px);
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    max-width: calc(100vw - 240px);
+  }
 }/*# sourceMappingURL=main.css.map */

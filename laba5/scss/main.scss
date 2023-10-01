@@ -15,9 +15,6 @@
 @include mix.font-face("DMSans", 400);
 @include mix.font-face("DMSans", 500);
 @include mix.font-face("DMSans", 700);
-@include mix.font-face("HelveticaNeue", 400);
-@include mix.font-face("HelveticaNeue", 500);
-@include mix.font-face("HelveticaNeue", 700);
 
 html {
   box-sizing: border-box;
@@ -40,4 +37,14 @@ body {
 .container {
   margin: 0 auto;
   max-width: calc(100vw - 20px);
+
+  @media (min-width: 380px) {
+    max-width: calc(100vw - 40px);
+  }
+  @media (min-width: 760px) {
+    max-width: calc(100vw - 120px);
+  }
+  @media (min-width: 1024px) {
+    max-width: calc(100vw - 240px);
+  }
 }

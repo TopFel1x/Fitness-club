@@ -9,6 +9,10 @@
   text-align: center;
 }
 
+.session__desktop {
+  display: none;
+}
+
 .session__h1 {
   display: none;
 }
@@ -45,4 +49,41 @@
   color: var.$text-main-color;
   font-family: DMSans;
   font-size: 12px;
+}
+
+@media (min-width: 1240px) {
+  .session__mobile {
+    display: none;
+  }
+
+  .session__desktop {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 70px;
+  }
+
+  .session__inf {
+    margin-top: 120px;
+    max-width: 525px;
+    text-align: left;
+  }
+
+  .session__h3 {
+    text-align: left;
+    font-size: 48px;
+  }
+
+  .session__img {
+    max-width: 560px;
+  }
+
+  .session__link {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
+  .session__link-desc {
+    margin-left: 32px;
+    font-size: 14px;
+  }
 }

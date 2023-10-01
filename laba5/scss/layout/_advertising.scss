@@ -43,3 +43,34 @@
 .advertising__img-wrapper {
   display: none;
 }
+
+@media (min-width: 1300px) {
+  .advertising {
+    padding-top: 230px;
+  }
+  .advertising__inner {
+    max-height: 500px;
+    padding-left: 130px;
+    padding-right: 110px;
+    display: flex;
+    column-gap: 200px;
+  }
+
+  .advertising__h2 {
+    font-size: 42px;
+  }
+
+  .advertising__desc {
+    font-size: 18px;
+  }
+
+  .advertising__link {
+    font-size: 18px;
+  }
+
+  .advertising__img-wrapper {
+    display: block;
+    position: relative;
+    bottom: 150px;
+  }
+}

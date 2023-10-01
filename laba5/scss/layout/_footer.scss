@@ -30,3 +30,16 @@
   max-width: 20px;
   flex-basis: 50%;
 }
+
+@media (min-width: 1024px) {
+  .footer__p {
+    display: flex;
+    column-gap: 5px;
+    font-size: 14px;
+  }
+
+  .social-media {
+    max-width: 180px;
+    column-gap: 32px;
+  }
+}

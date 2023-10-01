@@ -70,3 +70,34 @@
   font-size: 18px;
   font-weight: 700;
 }
+
+@media (min-width: 1240px) {
+  .why-us__h2 {
+    font-size: 42px;
+  }
+
+  .example {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 140px;
+
+    &:nth-child(2) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  .example__img {
+    max-width: 700px;
+    max-height: 600px;
+  }
+
+  .example__desc {
+    font-size: 21px;
+  }
+
+  .example__link {
+    max-width: 340px;
+    font-size: 18px;
+  }
+}
