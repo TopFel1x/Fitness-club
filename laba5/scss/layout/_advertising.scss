@@ -1,0 +1,45 @@
+@use "../abstracts/variables" as var;
+
+.advertising {
+  padding: 80px 0;
+}
+
+.advertising__inner {
+  background-color: #141a25;
+  border-radius: 24px;
+  padding: 64px 20px 82px;
+}
+
+.advertising__h2 {
+  margin-bottom: 38px;
+  color: var.$text-secondary-color;
+  font-size: var.$h-big-fz;
+  font-weight: 500;
+}
+
+.advertising__desc {
+  color: var.$text-secondary-color;
+
+  & p {
+    margin-bottom: 40px;
+  }
+}
+
+.advertising__link {
+  display: inline-block;
+  padding: 16px 0;
+  width: 100%;
+
+  text-align: center;
+  text-decoration: none;
+  border-radius: 100px;
+  background-color: var.$link-bg;
+  color: var.$text-secondary-color;
+  font-family: DMSans;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.advertising__img-wrapper {
+  display: none;
+}

@@ -1,0 +1,26 @@
+@use "../abstracts/variables" as var;
+
+.moving {
+  padding: 80px 0;
+}
+
+.moving__h2 {
+  margin-bottom: 38px;
+  color: #1a1a1a;
+  font-size: var.$h-big-fz;
+  font-weight: 500;
+}
+
+.moving__img-wrapper {
+  text-align: center;
+}
+
+.moving__img {
+  margin-bottom: 32px;
+  max-width: 300px;
+}
+
+.moving__desc {
+  color: var.$text-main-color;
+  line-height: 150%; /* 24px */
+}

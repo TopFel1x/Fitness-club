@@ -1,0 +1,15 @@
+@mixin font-face($family, $weight) {
+  $weight-to-str: "Regular";
+  @if ($weight == 500) {
+    $weight-to-str: "Medium";
+  } @else if ($weight == 700) {
+    $weight-to-str: "Bold";
+  }
+
+  @font-face {
+    font-family: $family;
+    src: url("../fonts/#{$family}-#{$weight-to-str}.woff2") format("woff2");
+    font-weight: $weight;
+    font-style: normal;
+  }
+}
