@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SVG</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/svg.css" />
+  </head>
+  <body>
+    <!-- Exercise 3: Icon library -->
+    <svg display="none">
+      <symbol id="exit" width="100" height="100">
+        <g stroke="currentColor" stroke-width="10">
+          <line x1="0" y1="0" x2="100" y2="100" />
+          <line x1="0" y1="100" x2="100" y2="0" />
+        </g>
+      </symbol>
+
+      <symbol id="burger-menu" width="100" height="100">
+        <g>
+          <rect width="100" height="100" rx="20px" />
+          <rect width="80" height="15" x="10" y="10" fill="#fff" rx="10" />
+          <rect width="80" height="15" x="10" y="42.5" fill="#fff" rx="10" />
+          <rect width="80" height="15" x="10" y="75" fill="#fff" rx="10" />
+        </g>
+      </symbol>
+
+      <symbol id="search" width="110">
+        <g stroke="currentColor" stroke-width="5px">
+          <circle r="50" cx="50%" cy="60" fill="none" />
+          <line x1="55" y1="110" x2="55" y2="180" />
+        </g>
+      </symbol>
+
+      <symbol id="home-page">
+        <g>
+          <rect width="150" height="150" rx="30" />
+          <path
+            d="M75 10 L20 60 L40 60 L40 130 L110 130 L110 60 L130 60 L75 10"
+            stroke="#fff"
+            fill="#fff"
+          />
+        </g>
+      </symbol>
+
+      <symbol id="ex5">
+        <path
+          d="M0 0 L0 300 L500 300 L500 0 L270 0 L270 120 L230 120 L230 70 L200 70
+            L200 40 L150 40 L150 0 L120 0 L120 120 L90 120 L90 10 L50 10 L50 30 L30 30
+            L30 20 L20 20 L20 90 L15 90 L15 0 L0 0"
+        />
+      </symbol>
+    </svg>
+
+    <!-- Exercise 4: Use icon library -->
+    <div class="ex4">
+      <a href="#">
+        <svg class="exit-svg">
+          <use class="ex4__exit" href="#exit" />
+        </svg>
+      </a>
+      <a class="burger-link" href="#">
+        <svg class="burger-svg">
+          <use class="ex4__burger-menu" href="#burger-menu" />
+        </svg>
+      </a>
+      <a href="#">
+        <svg>
+          <use class="ex4__search" href="#search" />
+        </svg>
+      </a>
+      <a href="#">
+        <svg>
+          <use class="ex4__home-page" href="#home-page" />
+        </svg>
+      </a>
+    </div>
+
+    <!-- Exercise 5: Parallax effect -->
+    <div class="parallax">
+      <svg>
+        <defs class="parralax__defs">
+          <filter id="blur1">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="1" />
+          </filter>
+          <filter id="blur2">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
+          </filter>
+          <filter id="blur3">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="4" />
+          </filter>
+        </defs>
+        <div class="parallax__fon">
+          <svg class="parallax__top" width="300" height="300">
+            <use href="#ex5" filter="url(#blur1)" fill="#006200" />
+            <animateTransform
+              attributeName="transform"
+              type="translate"
+              from="-100"
+              to="0"
+              dur="8s"
+              repeatCount="indefinite"
+            />
+          </svg>
+          <svg class="parallax__center" filter="url(#blur2)">
+            <use href="#ex5" filter="url(#blur2)" fill="#009d00" />
+            <animateTransform
+              attributeName="transform"
+              type="translate"
+              from="-100"
+              to="0"
+              dur="4s"
+              repeatCount="indefinite"
+            />
+          </svg>
+          <svg class="parallax__bottom">
+            <use href="#ex5" filter="url(#blur3)" fill="#00ff00" />
+            <animateTransform
+              attributeName="transform"
+              type="translate"
+              from="-100"
+              to="0"
+              dur="2s"
+              repeatCount="indefinite"
+            />
+          </svg>
+        </div>
+      </svg>
+    </div>
+
+    <!-- Exercise 6: Map -->
+    <div class="map">
+      <div class="map__svg">
+        <svg width="300" height="500" fill="none" stroke-width="2px">
+          <path
+            stroke="black"
+            d="M0 500 L0 200 L140 200 M 0 200 L0 0 L300 0 L300 200 L150 200 M300 200 L300 500 L200 500
+          L200 400 L300 400 M200 500 L50 500 Z"
+          />
+          <rect
+            class="map__rect1"
+            width="30"
+            height="150"
+            x="20"
+            y="20"
+            rx="2"
+            fill="#000"
+            onclick="numHouse(1)"
+          />
+          <rect
+            class="map__rect2"
+            width="30"
+            height="150"
+            x="100"
+            y="20"
+            rx="2"
+            fill="#000"
+            onclick="numHouse(2)"
+          />
+          <rect
+            class="map__rect3"
+            width="30"
+            height="150"
+            x="180"
+            y="20"
+            rx="2"
+            fill="#000"
+            onclick="numHouse(3)"
+          />
+          <rect
+            class="map__rect4"
+            width="30"
+            height="150"
+            x="260"
+            y="20"
+            rx="2"
+            fill="#000"
+            onclick="numHouse(4)"
+          />
+        </svg>
+        <svg id="last-exit" width="100" height="100">
+          <use href="#exit" />
+        </svg>
+      </div>
+
+      <span class="map__span">What do you want to know?</span>
+    </div>
+
+    <script src="svg.js"></script>
+  </body>
+</html>

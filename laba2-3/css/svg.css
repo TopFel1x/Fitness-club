@@ -1,0 +1,109 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 100px;
+}
+
+/* Exercise 4: Use icon library */
+.ex4 {
+  margin-bottom: 100px;
+}
+
+.ex4 a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+.ex4 a:hover use {
+  transition-duration: 0.5s;
+  fill: gold;
+  color: gold;
+}
+
+symbol {
+  width: 100px;
+  height: 100px;
+}
+
+.ex4__exit {
+  color: red;
+}
+
+.ex4__burger-menu {
+  fill: green;
+}
+
+.ex4__search {
+  color: blue;
+}
+
+.ex4__home-page {
+  fill: black;
+}
+
+.burger-link {
+  position: relative;
+}
+
+/* Burger to exit (add class active) */
+.active rect {
+  transition-property: transform, y;
+  transition-duration: 2s, 0.8s;
+}
+
+.active rect:nth-of-type(2) {
+  transform: rotate(45deg);
+  transform-origin: center;
+  y: 42.5px;
+}
+
+.active rect:nth-of-type(3) {
+  display: none;
+}
+
+.active rect:nth-of-type(4) {
+  transform: rotate(-45deg);
+  transform-origin: center;
+  y: 42.5px;
+}
+
+/* Exercise 5: parallax */
+.parallax {
+  margin-bottom: 100px;
+}
+
+.parallax__fon {
+  margin: auto;
+  width: 200px;
+  background-color: #9dff9d;
+  overflow: hidden;
+  height: 300px;
+}
+
+.parallax__center {
+  position: relative;
+  top: -250px;
+  width: 300px;
+  height: 300px;
+}
+
+.parallax__bottom {
+  position: relative;
+  top: -500px;
+  width: 300px;
+  height: 300px;
+}
+
+/* Exercise 6: Map */
+#last-exit {
+  position: relative;
+  right: 105px;
+}
+
+.map__span {
+  font-size: 42px;
+}

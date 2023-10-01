@@ -1,0 +1,18 @@
+.container {
+  max-width: 1600px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+}
+
+.col {
+  border: 10px double black;
+  background: orange;
+  color: rgb(240, 0, 172);
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    grid-column: span #{$i};
+  }
+}
