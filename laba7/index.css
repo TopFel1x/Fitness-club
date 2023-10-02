@@ -1,0 +1,90 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: inherit;
+}
+
+body {
+  height: 100vh; /* Высота равна высоте видимой области браузера */
+  overflow: hidden; /* Скрыть вертикальную прокрутку */
+}
+
+/* Header: ex6 */
+.header__nav {
+  display: none;
+  background-color: gold;
+  text-align: center;
+}
+
+.active rect {
+  transition-property: transform, y;
+  transition-duration: 2s, 0.8s;
+}
+
+.active rect:nth-of-type(2) {
+  transform: rotate(45deg);
+  transform-origin: center;
+  y: 42.5px;
+}
+
+.active rect:nth-of-type(3) {
+  display: none;
+}
+
+.active rect:nth-of-type(4) {
+  transform: rotate(-45deg);
+  transform-origin: center;
+  y: 42.5px;
+}
+
+/* Main */
+.main {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 100vh;
+  margin: 0;
+  background-color: red;
+}
+
+.toast {
+  background-color: orange;
+  color: #fff;
+  width: 300px;
+  margin: 10px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translateY(120px);
+  transition: transform 0.3s ease-in;
+}
+
+.toast.show {
+  transform: translateY(0px);
+}
+
+.toast__header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: olivedrab;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.toast__message {
+  padding: 10px;
+}
