@@ -1,0 +1,25 @@
+@use "../abstracts/variables" as var;
+
+.header {
+  background-color: var.$main-bg;
+  padding: 13px 0;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__button {
+  padding: 10px 24px;
+  border: none;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.1);
+
+  color: var.$text-secondary-color;
+  text-align: center;
+  font-family: DMSans;
+  font-size: 14px;
+  font-weight: 500;
+}

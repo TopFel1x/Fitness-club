@@ -1,0 +1,45 @@
+@use "../abstracts/variables";
+
+.footer {
+  padding: 35px 0;
+  border: 1px solid #000;
+  background: #f9f9fb;
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__p {
+  color: rgba(26, 26, 26, 0.56);
+  font-size: 12px;
+  line-height: 180%; /* 21.6px */
+}
+
+.social-media {
+  max-width: 72px;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 32px;
+  row-gap: 10px;
+}
+
+.social-network {
+  max-width: 20px;
+  flex-basis: 50%;
+}
+
+@media (min-width: 1024px) {
+  .footer__p {
+    display: flex;
+    column-gap: 5px;
+    font-size: 14px;
+  }
+
+  .social-media {
+    max-width: 180px;
+    column-gap: 32px;
+  }
+}
