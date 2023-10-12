@@ -1,0 +1,110 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: violet;
+}
+
+.app {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.form {
+  min-width: 800px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 50px;
+  background-color: pink;
+  border-radius: 20px;
+}
+
+.form__h1 {
+  margin-bottom: 10px;
+  font-size: 32px;
+}
+
+.form__label {
+  margin-bottom: 20px;
+}
+
+.form__textarea {
+  padding: 10px 20px;
+  width: 100%;
+  resize: none;
+  border-radius: 20px;
+  height: 250px;
+
+  font-size: 16px;
+}
+
+.form__button-wrapper {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.value-len {
+  margin-right: 20px;
+  font-size: 20px;
+}
+
+.form__button {
+  border: none;
+  background-color: purple;
+  border-radius: 10px;
+  padding: 10px 18px;
+
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+}
+
+.disabled {
+  border: 1px solid #000;
+  background-color: grey;
+}
+
+.form__h3-wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 15px;
+  font-size: 28px;
+}
+
+.item {
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 10px 20px;
+  border: 2px solid #000;
+  border-radius: 8px;
+}
+
+.item__inf {
+  max-width: 650px;
+  overflow-wrap: break-word;
+  margin-right: 20px;
+  margin-bottom: 40px;
+}
+
+.item__time {
+  margin-right: 10px;
+  text-align: right;
+}
+
+.yellow-text {
+  color: yellow;
+}
+
+.red-text {
+  color: red;
+}

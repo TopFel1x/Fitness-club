@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue: Laba 11</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- JS -->
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="js/app.js" defer></script>
+  </head>
+  <body>
+    <div id="app" class="app">
+      <form @submit.prevent="handleSubmit" action="" class="form">
+        <h1 class="form__h1">Текст новой записи</h1>
+        <label class="form__label" for="record">
+          <textarea
+            id="record"
+            class="form__textarea"
+            cols="30"
+            rows="10"
+            v-model="val"
+            @input="charLimit"
+            :class="{ 'red-text': charCount > 144 }"
+          ></textarea>
+        </label>
+        <div class="form__button-wrapper">
+          <div
+            class="value-len"
+            v-show="charCount >= 1"
+            :class="{ 'red-text': charCount > 144, 'yellow-text': charCount > 134 }"
+          >
+            {{ charCount }}/144
+          </div>
+          <button
+            class="form__button"
+            @click="addNote"
+            :disabled="val === ''"
+            :class="{ 'disabled': val === '' }"
+          >
+            Добавить
+          </button>
+        </div>
+
+        <div class="form__div" v-if="notes.length >= 1">
+          <div class="form__h3-wrapper" v-if="notes.length === 1">
+            <h3 class="form__h3">Запись:</h3>
+          </div>
+          <div class="form__h3-wrapper" v-else>
+            <h3 class="form__h3">Записи:</h3>
+            <p class="form__num-records">{{ notes.length }}</p>
+          </div>
+          <ul class="list">
+            <li class="item" v-for="(note, index) in notes" :key="index">
+              <p class="item__inf">{{ note.text }}</p>
+              <p class="item__time">{{ note.timestamp }}</p>
+            </li>
+          </ul>
+        </div>
+        <div class="form__div" v-else>
+          <div class="form__h3-wrapper">
+            <h3 class="form__h3">Нет записей</h3>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
