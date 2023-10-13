@@ -5,6 +5,23 @@
   padding: 13px 0;
 }
 
+.header__left {
+  display: flex;
+  align-items: center;
+  column-gap: 200px;
+}
+
+.header__list {
+  display: flex;
+  column-gap: 50px;
+}
+
+.header__link {
+  text-decoration: none;
+  font-size: 18px;
+  color: goldenrod;
+}
+
 .header__inner {
   display: flex;
   justify-content: space-between;
