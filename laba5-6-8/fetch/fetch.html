@@ -3,13 +3,47 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fetch</title>
+    <title>Laba 9</title>
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css" />
     <!-- JS -->
+    <script src="js/fetch.js" defer></script>
   </head>
   <body>
-    <section class="gallery"></section>
-    <section class="temperature"></section>
+    <main class="main">
+      <section class="gallery">
+        <button class="refresh-button">Обновить</button>
+        <br />
+        <hr />
+        <div class="loader-wrapper">
+          <div id="loader" class="loader"></div>
+        </div>
+        <div class="gallery__content"></div>
+      </section>
+
+      <section class="temperature">
+        <form action="" class="form">
+          <label for="aud-num">
+            Номер аудитории:
+            <input type="text" id="room-number" required />
+          </label>
+          <label for="temp">
+            Температура:
+            <input type="text" id="temp" required />
+          </label>
+          <br />
+          <button class="sub-btn" type="submit">Отправить</button>
+        </form>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="toast">
+        <div class="toast__header">
+          <span class="toast__name"></span>
+          <button class="close-toast">X</button>
+        </div>
+        <div class="toast__message"></div>
+      </div>
+    </footer>
   </body>
 </html>
