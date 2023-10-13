@@ -1,0 +1,32 @@
+$header-padding: 5px;
+$header-margin: 5px;
+
+$main-padding: 10px;
+$main-margin: 10px;
+
+$footer-padding: 15px;
+$footer-margin: 15px;
+
+$other-padding: 20px;
+$other-margin: 20px;
+
+header {
+  padding: $header-padding;
+  margin: $header-margin;
+}
+
+main {
+  padding: $main-padding;
+  margin: $main-margin;
+}
+
+footer {
+  padding: $footer-padding;
+  margin: $footer-margin;
+}
+
+section,
+nav {
+  padding: $other-padding;
+  margin: $other-margin;
+}
